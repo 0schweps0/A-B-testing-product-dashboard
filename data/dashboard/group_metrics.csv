@@ -1,0 +1,3 @@
+variant,assigned_users,reactivated_drivers,reactivation_rate,avg_rides_per_assigned_driver,completed_rides,revenue,bonus_cost,contribution_before_bonus,contribution_after_bonus
+control,4433,498,0.11233927362959621,0.34220618091585836,1517,210204.85,0,84081.940,84081.940
+treatment,4433,626,0.14121362508459281,0.44529663884502596,1974,266452.93,99000.00,106581.172,7581.172

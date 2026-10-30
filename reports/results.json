@@ -1,0 +1,18 @@
+{
+  "rate_control": 0.11233927362959621,
+  "rate_treatment": 0.14121362508459281,
+  "absolute_uplift": 0.028874351454996602,
+  "relative_uplift": 0.25702811244979906,
+  "ci_low": 0.015031404984540817,
+  "ci_high": 0.042726515626426105,
+  "p_value": 4.394836767099319e-05,
+  "scope": "ALL",
+  "n_control": 4433,
+  "n_treatment": 4433,
+  "srm_p_value": 1.0,
+  "rides_p_value_exploratory": 0.00012380992107247432,
+  "net_incremental_contribution": -76500.76800000001,
+  "net_ci_low": -86642.43118398082,
+  "net_ci_high": -66359.1048160192,
+  "bonus_cost": 99000.0
+}

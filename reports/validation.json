@@ -1,0 +1,25 @@
+{
+  "source_counts": {
+    "drivers": 8866,
+    "experiment_assignments": 8866,
+    "rides": 12626,
+    "bonus_payments": 330
+  },
+  "sql_pandas_driver_parity": "passed",
+  "sql_statistics_effect_parity": "passed",
+  "statistics_written_to_postgres": 4,
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.15.3",
+    "statsmodels": "0.14.6",
+    "psycopg": "3.2.13"
+  },
+  "raw_sha256": {
+    "drivers": "9e9d083780cbbdf1db828e0cdf4541062add9c59304f472e5f262e3be34584d6",
+    "experiment_assignments": "f139fd370ef6291fd4b07a4ed9e406217702256ab0b594c4cbf5ab11d8f0ee25",
+    "rides": "99607060d82fa0687c98190b06b1804fa4783e7fa8a558fdea7b2d7d148a7610",
+    "bonus_payments": "65a6ae7d8ce71c05d7b50b297dc01df5da46e06a2ea9a7b0bd1c1a5deb63c4e1"
+  }
+}

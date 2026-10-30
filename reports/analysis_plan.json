@@ -1,0 +1,22 @@
+{
+  "baseline": 0.12,
+  "mde_absolute": 0.02,
+  "alpha": 0.05,
+  "power": 0.8,
+  "required_per_arm": 4433,
+  "total_assigned": 8866,
+  "allocation": "complete randomization, fixed equal arm sizes",
+  "H0": "p_treatment = p_control",
+  "H1": "p_treatment != p_control",
+  "primary": "at least one completed ride in [assignment, assignment + 7 days)",
+  "secondary": [
+    "rides per assigned driver",
+    "platform revenue",
+    "bonus cost",
+    "contribution after bonus"
+  ],
+  "analysis": "intention-to-treat; two-sided pooled z-test; Newcombe 95% CI",
+  "segments": "exploratory country comparisons; no subgroup rollout claims",
+  "economic_model": "revenue is platform commission in RUB-equivalent; 40% contribution before bonuses",
+  "as_of": "2025-05-16T00:00:00Z"
+}

@@ -1,0 +1,42 @@
+name: analytics
+on: [push, pull_request]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17.6-bookworm
+        env:
+          POSTGRES_USER: analyst
+          POSTGRES_DB: reactivation
+          POSTGRES_PASSWORD: ci_only_not_a_real_secret
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U analyst -d reactivation"
+          --health-interval 2s --health-timeout 3s --health-retries 30
+    env:
+      POSTGRES_HOST: 127.0.0.1
+      POSTGRES_PORT: 5433
+      POSTGRES_USER: analyst
+      POSTGRES_DB: reactivation
+      POSTGRES_PASSWORD: ci_only_not_a_real_secret
+      RUN_POSTGRES_TESTS: '1'
+      MPLCONFIGDIR: /tmp/matplotlib
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python -m src.run_pipeline
+      - run: python -m pytest -q --junitxml=reports/pytest.xml
+      - run: python scripts/execute_notebook.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: analytics-evidence
+          path: |
+            reports/
+            notebooks/ab_analysis.ipynb

@@ -1,0 +1,10 @@
+{
+  "verified_files": 12,
+  "raw_and_dashboard_hashes_identical": true,
+  "source_counts": {
+    "drivers": 8866,
+    "experiment_assignments": 8866,
+    "rides": 12626,
+    "bonus_payments": 330
+  }
+}
