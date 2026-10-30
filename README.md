@@ -125,7 +125,7 @@ The local Streamlit/Plotly app includes eight KPI cards, group and country rates
 
 ## Reproducibility
 
-Requires Python 3.11+ (validated on 3.12), Docker with Compose v2 and a free local port 5433. Run commands from this checkout. No Git worktree is needed.
+Requires Docker with Compose v2 and a free local port 5433. Run commands from this checkout. No Git worktree is needed.
 
 ```bash
 python3 -m venv .venv
